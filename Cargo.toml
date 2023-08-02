@@ -1,0 +1,12 @@
+[package]
+name = "nybble"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jere Käpyaho <2261936+jerekapyaho@users.noreply.github.com>"]
+license = "MIT"
+description = """
+Helper crate to split byte vectors into nybbles and combine them back.
+"""
+repository = "https://github.com/coniferprod/nybble"
+
+[dependencies]
