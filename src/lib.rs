@@ -3,11 +3,23 @@
 //! `nybble` is a helper crate to split byte vectors into nybbles
 //! and combine them back.
 
+use std::fmt;
+
 /// The order of nybbles in a byte.
 #[derive(Copy, Clone, Eq, PartialEq, Hash, Debug)]
 pub enum NybbleOrder {
     HighFirst,
     LowFirst
+}
+
+impl fmt::Display for NybbleOrder {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        let s = match self {
+            NybbleOrder::HighFirst => "h",
+            NybbleOrder::LowFirst => "l",
+        };
+        write!(f, "{}", s)
+    }
 }
 
 /// Gets the high nybble from a byte.
